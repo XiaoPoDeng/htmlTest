@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在线观看电影_百度搜索</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", Arial, sans-serif; background: #fff; color: #333; }
+.header { background: #fff; border-bottom: 1px solid #e7e7e7; padding: 15px 20px; display: flex; align-items: center; gap: 30px; }
+.logo { font-size: 2.2em; font-weight: bold; color: #2932e1; }
+.logo span { color: #e12932; }
+.search-box { display: flex; flex: 1; max-width: 600px; }
+.search-box input { flex: 1; padding: 10px 15px; border: 2px solid #2932e1; border-right: none; border-radius: 10px 0 0 10px; font-size: 1em; outline: none; }
+.search-box button { padding: 10px 25px; background: #2932e1; color: white; border: 2px solid #2932e1; border-radius: 0 10px 10px 0; cursor: pointer; font-size: 1em; }
+.search-info { padding: 10px 100px; color: #9195a3; font-size: 0.9em; border-bottom: 1px solid #e7e7e7; }
+.tabs { padding: 10px 100px; border-bottom: 1px solid #e7e7e7; }
+.tabs a { color: #626675; text-decoration: none; padding: 8px 15px; margin-right: 5px; font-size: 0.95em; }
+.tabs a.active { color: #2932e1; font-weight: bold; border-bottom: 2px solid #2932e1; }
+.results { padding: 20px 100px; max-width: 900px; }
+.result-item { margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #f0f0f0; }
+.result-item .ad-tag { display: inline-block; background: #f5f5f6; color: #9195a3; padding: 2px 8px; border-radius: 3px; font-size: 0.75em; margin-right: 8px; }
+.result-item .promo-tag { display: inline-block; background: #fff3e0; color: #ff6f00; padding: 2px 8px; border-radius: 3px; font-size: 0.75em; margin-right: 8px; }
+.result-title { font-size: 1.2em; margin-bottom: 8px; }
+.result-title a { color: #2440b3; text-decoration: none; }
+.result-title a:hover { color: #e12932; }
+.result-desc { color: #626675; font-size: 0.95em; line-height: 1.6; margin-bottom: 8px; }
+.result-url { color: #006621; font-size: 0.85em; }
+.result-meta { display: flex; gap: 15px; margin-top: 8px; font-size: 0.85em; color: #9195a3; }
+.ad-result { background: #fafafa; padding: 15px; border-radius: 5px; border-left: 3px solid #ff6f00; }
+.promo-result { background: #fff8f0; padding: 15px; border-radius: 5px; border-left: 3px solid #2932e1; }
+.sidebar-ad { position: fixed; right: 20px; top: 200px; width: 280px; background: #f5f5f6; padding: 20px; border-radius: 8px; }
+.sidebar-ad h3 { font-size: 1.1em; margin-bottom: 15px; color: #333; }
+.sidebar-ad-item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #e7e7e7; }
+.sidebar-ad-item h4 { font-size: 0.95em; margin-bottom: 5px; }
+.sidebar-ad-item h4 a { color: #2440b3; text-decoration: none; }
+.sidebar-ad-item p { font-size: 0.85em; color: #626675; line-height: 1.5; }
+.sidebar-ad-item .ad-label { color: #9195a3; font-size: 0.75em; }
+.pagination { padding: 20px 100px; text-align: center; }
+.pagination a { color: #2440b3; text-decoration: none; padding: 8px 15px; margin: 0 3px; border: 1px solid #e7e7e7; border-radius: 3px; }
+.pagination a.current { background: #2932e1; color: white; border-color: #2932e1; }
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo">百<span>度</span></div>
+<div class="search-box">
+<input type="text" value="在线观看电影">
+<button>百度一下</button>
+</div>
+</div>
+<div class="search-info">百度为您找到相关结果约125,000,000个 用时0.038秒</div>
+<div class="tabs">
+<a href="#" class="active">网页</a>
+<a href="#">资讯</a>
+<a href="#">视频</a>
+<a href="#">图片</a>
+<a href="#">贴吧</a>
+<a href="#">地图</a>
+<a href="#">更多</a>
+</div>
+<div class="results">
+<div class="result-item ad-result">
+<div class="result-title"><span class="ad-tag">广告</span><a href="#">极速影视 - 免费在线观看最新电影电视剧 | 1080P高清</a></div>
+<div class="result-desc">极速影视提供最新最全的高清电影、电视剧、综艺、动漫等影视资源，免费在线观看，无需注册，即点即播。支持手机、平板、电脑多端观看。</div>
+<div class="result-url">www.jisuys.com/</div>
+<div class="result-meta"><span>广告</span><span>2024年1月</span></div>
+</div>
+<div class="result-item promo-result">
+<div class="result-title"><span class="promo-tag">推广</span><a href="#">VIP影视会员 - 首月仅需9.9元 | 畅享4K超高清</a></div>
+<div class="result-desc">开通VIP影视会员，享受去广告、1080P/4K高清、下载观看、抢先看新剧等特权。新用户首月仅需9.9元，限时优惠！</div>
+<div class="result-url">vip.yingshidaquan.com/</div>
+<div class="result-meta"><span>推广</span><span>官方</span></div>
+</div>
+<div class="result-item ad-result">
+<div class="result-title"><span class="ad-tag">广告</span><a href="#">天天影视大全 - 2024最新电影电视剧免费看</a></div>
+<div class="result-desc">天天影视大全汇聚全网影视资源，每日更新最新电影、热播电视剧、热门综艺。高清流畅播放，支持倍速播放和弹幕互动。</div>
+<div class="result-url">www.ttys.com/</div>
+<div class="result-meta"><span>广告</span><span>2024年1月</span></div>
+</div>
+<div class="result-item">
+<div class="result-title"><a href="#">免费在线观看电影_高清影视资源_每日更新</a></div>
+<div class="result-desc">提供最新最全的免费影视资源,包括电影、电视剧、综艺、动漫等,支持在线观看和下载,高清画质流畅播放。</div>
+<div class="result-url">www.freeyingshi.com/movie</div>
+<div class="result-meta"><span>评分 4.5</span><span>1.2万评论</span></div>
+</div>
+<div class="result-item">
+<div class="result-title"><a href="#">2024最新电影电视剧在线观看 - 高清影视网</a></div>
+<div class="result-desc">2024年最新电影、电视剧、综艺、动漫在线观看。每日更新最新影视资源,提供1080P高清播放,支持手机电脑多端观看。</div>
+<div class="result-url">www.hdys.com/2024</div>
+<div class="result-meta"><span>评分 4.3</span><span>8562评论</span></div>
+</div>
+<div class="result-item ad-result">
+<div class="result-title"><span class="ad-tag">广告</span><a href="#">星空影视APP下载 - 海量资源免费看</a></div>
+<div class="result-desc">星空影视APP,海量影视资源免费下载观看。支持离线缓存、倍速播放、弹幕互动。iOS/Android双端可用,立即下载体验。</div>
+<div class="result-url">www.xkys.com/app</div>
+<div class="result-meta"><span>广告</span><span>2024年1月</span></div>
+</div>
+<div class="result-item">
+<div class="result-title"><a href="#">热播电视剧大全_最新电视剧在线观看_高清电视剧</a></div>
+<div class="result-desc">汇聚全网热播电视剧资源,包括繁花、狂飙、漫长的季节、莲花楼等热门剧集,全集在线观看,每日同步更新。</div>
+<div class="result-url">www.tvyingshi.com/</div>
+<div class="result-meta"><span>评分 4.6</span><span>2.3万评论</span></div>
+</div>
+<div class="result-item">
+<div class="result-title"><a href="#">电影天堂_最新电影_电影在线观看_电影下载</a></div>
+<div class="result-desc">电影天堂为您提供最新电影、经典电影、高分电影推荐。支持在线观看和BT下载,涵盖动作、喜剧、爱情、科幻等各类电影。</div>
+<div class="result-url">www.dytt.com/</div>
+<div class="result-meta"><span>评分 4.2</span><span>5678评论</span></div>
+</div>
+<div class="result-item promo-result">
+<div class="result-title"><span class="promo-tag">推广</span><a href="#">影院VIP会员卡 - 全场5折优惠 | 限时抢购</a></div>
+<div class="result-desc">影院VIP会员卡限时促销,原价399元现仅需199元,享受全年无限观影、优先选座、专属折扣等特权。限时抢购,先到先得!</div>
+<div class="result-url">vip.cinema.com/</div>
+<div class="result-meta"><span>推广</span><span>官方</span></div>
+</div>
+<div class="result-item">
+<div class="result-title"><a href="#">好看的电影推荐_2024年最新好看电影排行榜</a></div>
+<div class="result-desc">2024年最新好看电影排行榜,为您推荐最受欢迎的电影作品。包括流浪地球2、封神第一部、满江红等高分电影,在线观看。</div>
+<div class="result-url">www.haodianying.com/rank</div>
+<div class="result-meta"><span>评分 4.7</span><span>3.1万评论</span></div>
+</div>
+</div>
+<div class="sidebar-ad">
+<h3>为您推荐</h3>
+<div class="sidebar-ad-item">
+<span class="ad-label">广告</span>
+<h4><a href="#">极速影视VIP - 首月免费</a></h4>
+<p>海量高清影视资源,去广告畅享观看</p>
+</div>
+<div class="sidebar-ad-item">
+<span class="ad-label">广告</span>
+<h4><a href="#">4K投影仪 限时特惠</a></h4>
+<p>在家享受影院级观影体验</p>
+</div>
+<div class="sidebar-ad-item">
+<span class="ad-label">广告</span>
+<h4><a href="#">影视会员联合卡</a></h4>
+<p>一卡畅享多个平台VIP特权</p>
+</div>
+<div class="sidebar-ad-item">
+<span class="ad-label">广告</span>
+<h4><a href="#">智能电视 观影首选</a></h4>
+<p>大屏观影,沉浸体验</p>
+</div>
+</div>
+<div class="pagination">
+<a href="#" class="current">1</a>
+<a href="#">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+<a href="#">下一页</a>
+</div>
+</body>
+</html>
