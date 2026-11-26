@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影作品展示：城市光影</title>
+    <style>
+        body { font-family: 'Microsoft YaHei', sans-serif; margin: 0; padding: 0; background: #1a1a1a; color: #fff; }
+        .header { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 30px; max-width: 1200px; margin: 0 auto; }
+        .photo { position: relative; overflow: hidden; border-radius: 8px; }
+        .photo img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s; }
+        .photo:hover img { transform: scale(1.05); }
+        .photo-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); padding: 15px; opacity: 0; transition: opacity 0.3s; }
+        .photo:hover .photo-info { opacity: 1; }
+        .about { max-width: 800px; margin: 0 auto; padding: 30px; background: #2a2a2a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📷 城市光影</h1>
+        <p>用镜头捕捉城市的美丽瞬间</p>
+    </div>
+
+    <div class="gallery">
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=30" alt="城市夜景">
+            <div class="photo-info">
+                <h3>都市之夜</h3>
+                <p>上海外滩 · 2026年10月</p>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=31" alt="街道">
+            <div class="photo-info">
+                <h3>老街印象</h3>
+                <p>北京南锣鼓巷 · 2026年9月</p>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=32" alt="建筑">
+            <div class="photo-info">
+                <h3>现代建筑</h3>
+                <p>深圳CBD · 2026年10月</p>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=33" alt="日落">
+            <div class="photo-info">
+                <h3>日落时分</h3>
+                <p>广州塔 · 2026年8月</p>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=34" alt="雨天">
+            <div class="photo-info">
+                <h3>雨后街头</h3>
+                <p>成都春熙路 · 2026年7月</p>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/400/300?random=35" alt="夜景">
+            <div class="photo-info">
+                <h3>霓虹闪烁</h3>
+                <p>重庆洪崖洞 · 2026年9月</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>关于摄影师</h2>
+        <img src="https://picsum.photos/150/150?random=36" alt="摄影师" style="float: left; margin: 0 20px 20px 0; border-radius: 50%;">
+        <p>李明，城市摄影爱好者，专注于捕捉城市中的光影变化。相信每座城市都有独特的故事，希望通过镜头记录这些美好的瞬间。</p>
+        <p>摄影器材：Sony A7M4 + 24-70mm F2.8 GM</p>
+        <p>拍摄理念：用光线讲述城市故事，用构图展现建筑之美。</p>
+    </div>
+
+    <div style="text-align: center; padding: 30px;">
+        <p>© 2026 城市光影摄影工作室 | 版权所有</p>
+    </div>
+</body>
+</html>
